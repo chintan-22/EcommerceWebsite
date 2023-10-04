@@ -87,3 +87,41 @@ $('.banner-img').slick({
     slidesToScroll: 1,
     autoplay: true,
 });
+const scriptURL = 'https://script.google.com/u/0/home/projects/10nnJs5rZ1YVFw5Es4SkkSWC73oE-6DJTo583Oa6P5p8e1PBHPBJIwz_X/edit'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('Sign up', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.outerHTML = "Message sent successfully"
+            setTimeout(function() {
+                msg.outerHTML = "Successful Login"
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+})
+
+// JavaScript to toggle the dropdown menu
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownBtn = document.querySelector(".dropbtn");
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    dropdownBtn.addEventListener("click", function() {
+        dropdownContent.classList.toggle("show");
+    });
+
+    window.addEventListener("click", function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            const dropdowns = document.getElementsByClassName("dropdown-content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    });
+});

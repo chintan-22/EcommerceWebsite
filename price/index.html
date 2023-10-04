@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pricing Page</title>
+</head>
+
+<body>
+    <div class="pricing-container">
+        <div class="price">
+            <span id="price-value">$250</span>
+        </div>
+        <input type="range" id="price-slider" value="250" min="250" max="5000" step="250">
+    </div>
+    <script src="script.js"></script>
+</body>
+<div class="calendar">
+    <!-- Generate time slots for the day -->
+    <div class="slot" onclick="bookSlot(this)">9:00 AM - 10:00 AM</div>
+    <div class="slot" onclick="bookSlot(this)">10:00 AM - 11:00 AM</div>
+    <div class="slot" onclick="bookSlot(this)">11:00 AM - 12:00 PM</div>
+    <div class="slot" onclick="bookSlot(this)">12:00 PM - 1:00 PM</div>
+    <div class="slot" onclick="bookSlot(this)">1:00 PM - 2:00 PM</div>
+    <div class="slot" onclick="bookSlot(this)">2:00 PM - 3:00 PM</div>
+    <div class="slot" onclick="bookSlot(this)">3:00 PM - 4:00 PM</div>
+    <div class="slot" onclick="bookSlot(this)">4:00 PM - 5:00 PM</div>
+    <div class="slot" onclick="bookSlot(this)">5:00 PM - 6:00 PM</div>
+</div>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>
+
+
+</html>
